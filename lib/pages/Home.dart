@@ -27,13 +27,14 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
+          items:  <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
                 backgroundColor: Colors.orangeAccent),
             BottomNavigationBarItem(
-                icon: Icon(Icons.upload),
+                icon: IconButton(icon:Icon(Icons.upload),
+                  onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Upload()));},),
                 label: 'upload',
                 backgroundColor: Colors.orangeAccent),
           ],
