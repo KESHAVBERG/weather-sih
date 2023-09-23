@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,6 +16,15 @@ class _FeedState extends State<Feed> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.orange[100],
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: TextButton(
+          child: Text("Logout"),
+          onPressed: (){
+            FirebaseAuth.instance.signOut();
+          },
+        ),
+      ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,

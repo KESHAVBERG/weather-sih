@@ -14,6 +14,7 @@ class Upload extends StatefulWidget {
 class _UploadState extends State<Upload> {
   File? image;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+  //Pick messages
   Future pickImage() async {
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
