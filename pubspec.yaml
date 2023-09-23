@@ -39,6 +39,8 @@ dependencies:
   firebase_auth: ^4.10.0
   flutter_map: ^5.0.0
   image_picker: ^1.0.4
+  cloud_firestore: ^4.9.2
+  http: ^1.1.0
 
 
 

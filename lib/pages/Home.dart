@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:weather/pages/feed.dart';
 import 'package:weather/pages/upload.dart';
 import "package:latlong2/latlong.dart" as latLng;
 
@@ -36,6 +37,12 @@ class _HomeState extends State<Home> {
                 icon: IconButton(icon:Icon(Icons.upload),
                   onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Upload()));},),
                 label: 'upload',
+                backgroundColor: Colors.orangeAccent),
+            BottomNavigationBarItem(
+                icon: IconButton(icon:Icon(Icons.list), onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Feed()));
+                },),
+                label: 'Home',
                 backgroundColor: Colors.orangeAccent),
           ],
           type: BottomNavigationBarType.shifting,
