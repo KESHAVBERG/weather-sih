@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather/pages/Home.dart';
-import 'package:weather/pages/login.dart';
+import 'package:weather/pages/AuthPages/login.dart';
 import 'package:weather/pages/navigatorClass.dart';
 import 'package:weather/services/authServices.dart';
 
