@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
         primarySwatch: Colors.blue,
         tabBarTheme: const TabBarTheme(
             indicator: UnderlineTabIndicator( // color for indicator (underline)
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      home:FirebaseAuth.instance.currentUser != null? NavigatorClass():SignIn(),
+      // home:FirebaseAuth.instance.currentUser != null? NavigatorClass():SignIn(),
+      home:NavigatorClass()
     );
   }
 }

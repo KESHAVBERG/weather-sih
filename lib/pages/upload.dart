@@ -50,11 +50,14 @@ class _UploadState extends State<Upload> {
   Widget build(BuildContext context) {
     print("${image}");
     return Scaffold(
+
       body: Container(
+
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(30),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextFormField(
               controller: titleController,
@@ -85,7 +88,7 @@ class _UploadState extends State<Upload> {
               ),
             ),
             image != null? TextButton(onPressed: () async{
-              var request = http.MultipartRequest("post", Uri.http("192.168.187.158:8888", "/classify-flood"));
+              var request = http.MultipartRequest("post", Uri.http("192.168.137.19:48", "/classify-flood"));
               request.files.add(
                   http.MultipartFile(
                       'picture',
